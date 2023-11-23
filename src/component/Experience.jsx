@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls,PerspectiveCamera } from "@react-three/drei";
 import { Canvas, extend } from "@react-three/fiber";
 // import { useControls } from "leva";
 import Plane from "./Plane";
@@ -14,8 +14,11 @@ export default function Experience() {
       <directionalLight position={[0, 0, 5]} />
       <OrbitControls />
       <Sphere />
-      <Plane />
+      <PerspectiveCamera>
+
       <Box />
+      </PerspectiveCamera>
+      <Plane />
     </Canvas>
   );
 }
